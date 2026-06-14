@@ -1,7 +1,11 @@
 body{
     padding: 0;
     margin: 0;
-    background: salmon;
+    background: rgb(109, 157, 212);
+    background-image: url("bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -22,7 +26,8 @@ h2{
 .btn{
     font-size: 5rem;
     border: none;
-    background: rgb(255,255,255,.2);
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(1px);
     border-radius: 10px;
     padding: 15px;
     filter: grayscale();
@@ -37,5 +42,25 @@ h2{
 
 .emoji-name{
     font-weight: 600;
-    color: darkblue;
+    color: rgb(0, 0, 0);
 }
+
+/*点xxx 都是class
+不带点的都是本身有的定义
+padding=内间距，内容和边缘的距离
+margin=外边距
+display:flex=css管理布局
+flex-direction=排列方向
+justify-content=主方向排列（flex-direction）
+align-items=负方向排列（剩下的）
+font-family=字体选择，优先-其次
+rem=相对root字体大小，通常=16px，保持比例固定，方便整体调整
+border边框
+rgb（）最后一个是颜色透明度
+border-radius圆角程度
+filter改为黑白
+transition是filter的应用效果及动画时长
+transform有scale/rotate/translateY等，放大旋转移动
+opacity透明度
+gap子元素间距
+position定位相对绝对
