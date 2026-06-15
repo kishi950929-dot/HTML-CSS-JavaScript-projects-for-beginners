@@ -1,5 +1,6 @@
 const btnEl = document.getElementById("btn");
 const emojiNameEl = document.getElementById("emoji-name");
+const dateElement = document.getElementById("date");
 //接入html定义好的区域
 
 const emoji = [];
@@ -27,6 +28,14 @@ async function getEmoji() {
 }
 
 getEmoji();
+
+const today = new Date();
+
+const year = today.getFullYear();
+const month = String(today.getMonth() + 1).padStart(2, "0");
+const day = String(today.getDate()).padStart(2, "0");
+
+dateElement.textContent = `${year}.${month}.${day}`;
 
 btnEl.addEventListener("click", () => {
   const randomNum = Math.floor(Math.random() * emoji.length);
