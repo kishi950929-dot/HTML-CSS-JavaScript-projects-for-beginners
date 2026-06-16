@@ -1,4 +1,4 @@
-const btnEl = document.getElementById("btn");
+const btnEl = document.getElementById("fortune-text");
 const emojiNameEl = document.getElementById("emoji-name");
 const dateElement = document.getElementById("date");
 //接入html定义好的区域
