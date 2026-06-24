@@ -1,26 +1,87 @@
 body {
-  background-color: #f1f1f1;
+  background-image:url(image.webp);
   font-family: "Arial", sans-serif;
   margin: 0;
   padding: 0;
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 3rem;
+  font-weight: 700;
   text-align: center;
   padding-top: 100px;
 }
 
 p {
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 1rem;
+  font-weight: 400;
   text-align: center;
   margin-bottom: 0.5rem;
+}
+
+#result{
+    font-size: 1.5rem;
+    font-weight: 600;
+
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+#scores{
+    position: fixed;
+
+    bottom: 30px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    font-size: 1.2rem;
+}
+
+@keyframes punch {
+    0%{
+        transform: scale(0.8);
+    }
+
+    50%{
+        transform: scale(1.2);
+    }
+
+    100%{
+        transform: scale(1);
+    }
+}
+
+.animate-choice{
+    animation: punch 0.3s ease;
 }
 
 .buttons {
   display: flex;
   justify-content: center;
+}
+
+.battle-area{
+    display: flex;
+    justify-content: space-around;
+}
+
+.choice-box{
+    text-align: center;
+}
+
+.big-choice{
+    font-size: 5rem;
+    border: 1px solid rgba(255,255,255,0.4);
+    width: 150px;
+    height: 150px;
+
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
 button {
@@ -31,22 +92,15 @@ button {
   cursor: pointer;
   border-radius: 5px;
   transition: all 0.3s ease-in-out;
+  background-color: transparent;
 }
 
 button:hover {
   opacity: 0.7;
 }
 
-#rock {
-  background-color: #ff0000;
-}
-
-#paper {
-  background-color: #2196f3;
-}
-
-#scissors {
-  background-color: #4caf50;
+.winner{
+    box-shadow: 0 0 30px rgba(255,215,0,0.8);
 }
 
 #user-score {

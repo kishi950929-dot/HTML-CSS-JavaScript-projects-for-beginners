@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,14 +8,32 @@
     <title>Rock Paper Scissors Game</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <h1>Rock Paper Scissors Game</h1>
-    <p>Choose your move:</p>
-    <div class="buttons">
-        <button id="rock">&#x1F44A;</button>
-        <button id="paper">&#x1f590;</button>
-        <button id="scissors">&#x270c;</button>
-    </div>
+    
+
+    <div class="battle-area">
+        <div class="choice-box">
+            <h2>Computer</h2>
+            <div id="computer-choice" class="big-choice">?</div>
+        </div>
+
+        <div class="choice-box">
+            <h2>You</h2>
+            <div id="player-choice" class="big-choice">?</div>
+        </div>
+        </div>
+        
+        <p>Choose your move</p>
+
+        <div class="buttons">
+            <button id="rock">✊</button>
+            <button id="paper">🖐</button>
+            <button id="scissors">✌️</button>
+        </div>
+
+
     <p id="result"></p>
     <p id="scores">
         Your score: <span id="user-score">0</span>
